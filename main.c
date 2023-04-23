@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-int lenes;
-int lenes2;
+int len;
+int len2;
 unsigned int ui;
 void *addr;
 
-lenes = _printf("Let's try to printf a simple sentence.\n");
-lenes2 = printf("Let's try to printf a simple sentence.\n");
+len = _printf("Let's try to printf a simple sentence.\n");
+len2 = printf("Let's try to printf a simple sentence.\n");
 ui = (unsigned int)INT_MAX + 1024;
 addr = (void *)0x7ffe637541f0;
 _printf("Length:[%d, %i]\n", len, len);
@@ -34,8 +34,8 @@ _printf("String:[%s]\n", "I am a string !");
 printf("String:[%s]\n", "I am a string !");
 _printf("Address:[%p]\n", addr);
 printf("Address:[%p]\n", addr);
-lenes = _printf("Percent:[%%]\n");
-lenes2 = printf("Percent:[%%]\n");
+len = _printf("Percent:[%%]\n");
+len2 = printf("Percent:[%%]\n");
 _printf("Len:[%d]\n", len);
 printf("Len:[%d]\n", len2);
 _printf("Unknown:[%r]\n");
