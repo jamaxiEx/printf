@@ -9,6 +9,7 @@
  */
 int main(void)
 {
-_printf("%.6s\n", "Best School !");
+_printf("%.6s", "Best School !\n");
+printf("%.6s\n", "Best School !\n");
 return (0);
 }
