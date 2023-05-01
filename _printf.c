@@ -11,7 +11,7 @@ Return: The number of characters printed to stdout.
 int _printf(const char *format, ...)
 {
 	int a, printed = 0, printed_chars = 0;
-	int switch, width, precision, size, buff_ind = 0;
+	int tag, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
 
@@ -33,13 +33,13 @@ int _printf(const char *format, ...)
 		else
 		{
 			print_buffer(buffer, &buff_ind);
-			switch = get_flags(format, &a);
+			tag = get_flags(format, &a);
 			width = get_width(format, &a, list);
 			precision = get_precision(format, &a, list);
 			size = get_size(format, &a);
 			++a;
 			printed = handle_print(format, &a, list, buffer,
-				switch, width, precision, size);
+				tag, width, precision, size);
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
